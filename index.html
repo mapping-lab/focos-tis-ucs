@@ -161,7 +161,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/infoamazonia/cm188o4o0029d01qu8y9nc1zg', // stylesheet location
     // center: [-57.1592, -6.4979],
     center: [-58.926394, -6.190564],
-    zoom: 4,
+    zoom: 5,
     minZoom: 3,
     maxBounds: [[-90.600324, -26.503416], [-20.933966, 5.888552]], // Set the max bounds
     maxZoom: 10 // Set the max zoom level
@@ -175,6 +175,7 @@ var mapLayers = {
 
 map.on('load', () => {
     map.addControl(new mapboxgl.NavigationControl());
+    map.addControl(new mapboxgl.FullscreenControl());
 
     let elements = document.querySelectorAll('li.layer-toggle a');
     // Layer controls
